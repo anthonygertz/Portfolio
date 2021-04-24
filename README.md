@@ -1,44 +1,45 @@
 ###### Anthony J. Gertz
 ###### Nashville Software School
-###### Project's Portfolio
-
-#Table of Contents
-###1.) Comparative Flood Resiliency Across Time for the Southeastern United States
-###2.) Covid19 Business Violations
-###3.) Earthquake Exploration
-###4.) Kaggle Competition - Permeability
-###5.) Vanderbilt University ACCRE Labs
+###### Projects' Portfolio
 <br>
-###6.) NSS Coding Assessments
-
-##Comparative Flood Resiliency Across Time for the Southeastern United States
+# Table of Contents
+1.) Comparative Flood Resiliency Across Time for the Southeastern United States<br>
+2.) Covid19 Business Violations<br>
+3.) Earthquake Exploration<br>
+4.) Kaggle Competition - Permeability<br>
+5.) Vanderbilt University ACCRE Labs<br>
+<br>
+6.) NSS Coding Assessments<br>
+<br>
+## Comparative Flood Resiliency Across Time for the Southeastern United States
 
 
 https://github.com/anthonygertz/MIDTERM_Gertz
+<br>
+## Covid19 Business Violations
 
-##Covid19 Business Violations
+<br>
+## Earthquake Exploration
 
+<br>
+## Kaggle Competition - Permeability
 
-##Earthquake Exploration
+<br>
+## NSS Coding Assessments
 
-
-##Kaggle Competition - Permeability
-
-
-##NSS Coding Assessments
-
-
-##Vanderbilt University ACCRE Labs
-
-
+<br>
+## Vanderbilt University ACCRE Labs
 
 
-#NSS Coding Assessments
-##Python Assessment
+<br>
 
+# NSS Coding Assessments<br>
+## Python Assessment
 
-##R Assessment
+<br>
+## R Assessment
 
+<br>
+## SQL Assessment
 
-##SQL Assessment
-
+<br>
