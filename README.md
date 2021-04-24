@@ -15,31 +15,30 @@
 
 
 https://github.com/anthonygertz/MIDTERM_Gertz
-<br>
+
 ## Covid19 Business Violations
 
-<br>
+
 ## Earthquake Exploration
 
-<br>
+
 ## Kaggle Competition - Permeability
 
-<br>
+
 ## NSS Coding Assessments
 
-<br>
+
 ## Vanderbilt University ACCRE Labs
 
 
-<br>
+
 
 # NSS Coding Assessments
 ## Python Assessment
 
-<br>
+
 ## R Assessment
 
-<br>
+
 ## SQL Assessment
 
-<br>
