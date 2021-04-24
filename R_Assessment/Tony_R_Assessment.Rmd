@@ -1,0 +1,284 @@
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+setwd("D:/NSS/RAssessment")
+
+options(scipen=999)
+```
+
+```{r}
+climate <- read_csv('data/climate.csv')
+climate
+```
+
+
+ANSWER #2 - The dataset climate contains 37,625 rows across 7 columns.
+
+ANSWER #3 - CODE BELOW: 
+
+
+```{r}
+country_codes <- read_csv('data/country_codes.csv')
+country_codes
+```
+```{r}
+temp_df <- merge(climate, country_codes,
+                 by.x = 'Country', by.y = 'A2 (ISO)',
+                 all.x = FALSE, all.y = FALSE)
+
+#Not dropping anything yet, don't know what lies ahead
+
+temp_df <- temp_df %>%
+  rename(A3 = `A3 (UN)`, 
+         Num = `NUM (UN)`,
+         Country_Code = Country,
+         Country = COUNTRY, 
+         Dial_Code = `DIALING CODE`) %>%
+  mutate(across(is.numeric, ~round(.,2)))
+  
+write_csv(temp_df, 'data/temp_df.csv') #Can't hurt to double check...
+
+distinct(temp_df, Country)
+```
+
+```{r}
+temp_df %>%
+  group_by(Country) %>%
+  summarise(n_distinct(Country))
+```
+
+
+ANSWER #4 - It appears there are 35 unique countries remaining in the merged dataset. Visual confirmation is required, as 'Korea, Republic of' could have been duplicated under 'Korea' or 'South Korea.'
+
+ANSWER #5 PART A: CODE BELOW
+
+
+```{r}
+renewable <- temp_df %>%
+  filter(Year == 2014, Indicator == 'Share of renewable electricity generation')
+renewable
+```
+
+
+ANSWER #5 PART B: CODE BELOW
+
+
+```{r}
+renewable %>%
+  ggplot(aes(Value, factor(Country, 
+                           levels = rev(levels(factor(Country)))))) + 
+  geom_col(fill = 'green') + 
+  labs(title = 'Percent Domestic Renewable Energy Production', 
+       x = 'Percent',
+       y = 'Country')
+```
+
+```{r}
+renewable %>%
+  ggplot(aes(Value, reorder(Country, Value))) + 
+  geom_col(fill = 'green') + 
+  labs(title = 'Percent Domestic Renewable Energy Production', 
+       x = 'Percent', 
+       y = 'Country')
+```
+
+
+ANSWER #5 PART C: Given the information I have on various countries, there is little conclusion to draw from the data other than surprise. Rather, I don't see any correlation between national wealth, access to fossil fuels, or other categorical variables of these countries by which to make any inference. 
+
+
+```{r}
+renewable <- renewable %>%
+  mutate(majority_renewable = ifelse(Value > 50, 1, 0))
+renewable$majority_renewable == 1  
+
+```
+
+```{r}
+fifty <- renewable %>%
+  filter (majority_renewable > 0) %>%
+  nrow()
+  #group_by(majority_renewable) %>%
+  #tally()
+  #count()
+  #summarise(length(majority_renewable == 1))
+  
+fifty/nrow(renewable) * 100
+
+```
+
+
+ANSWER #5 PART D: 29%, See code above! 
+
+
+```{r}
+electricity <- renewable %>%
+  select(Country_Code, majority_renewable) %>%
+  merge(temp_df,
+        by.x = 'Country_Code', by.y = 'Country_Code',
+                 all.x = FALSE, all.y = FALSE)
+
+#Exclude CTI scenario, it's a roadmap number and not relevant
+
+electricity <- electricity %>%
+  filter(Indicator == 'Electricity emissions intensity', 
+         Year == 2014, 
+         Variable != 'CTI scenario') %>%
+  mutate(majority_renewable = as.logical(majority_renewable))
+
+# electricity <- temp_df %>%
+#   filter(Year == 2014, Variable != 'CTI scenario', 
+#          (Indicator == 'Share of renewable electricity generation' | 
+#             Indicator == 'Electricity emissions intensity')) %>%
+#   mutate(majority_renewable = ifelse(Indicator == 'Share of renewable electricity generation' 
+#                                      & Value > 50, 1, 0)) %>%
+
+electricity
+```
+
+
+
+```{r}
+electricity %>%
+  ggplot(aes(Value, 
+             reorder(Country, Value), 
+             fill = majority_renewable)) + 
+  geom_col() + 
+  labs(title = 'Electricity Emissions Intensity', 
+       x = 'gCO2/kWh', 
+       y = 'Country',
+       fill = 'Majority Renewable')  
+  scale_fill_manual(labels = c('Yes', 'No'))
+```
+
+
+ANSWER #5 PART E: See graph above. I think it's relatively obvious that there is an inverse relationship between the two variables. One might look at France and see that they do not have majority renewable flagged yet they have very low CO2 emissions per energy consumption. How could this be? It's because France is over 50% nuclear power driven (which of course does not produce CO2 at a relevant level) but renewable energy proponents often do not count nuclear energy as a renewable fuel source.   
+
+
+```{r}
+oil_gas <- temp_df %>%
+  filter(Year == 2014, 
+         Indicator == 'Oil and Gas activity: production',
+         Variable != 'CTI scenario') %>%
+  arrange(desc(Value))
+head(oil_gas)
+```
+
+
+ANSWER #6 - See code above. The United States was the greatest oil and gas producer in 2014. 
+
+
+```{r}
+oil_gas_us <- temp_df %>%
+  filter(Country_Code == 'US',
+         Indicator == 'Oil and Gas activity: production',
+         Year < 2015) %>%
+  arrange(desc(Year))
+oil_gas_us
+```
+
+
+```{r}
+oil_gas_us %>%
+  ggplot(aes(x = Year, y = Value)) + 
+  geom_point() + 
+  labs(title = 'United States Oil & Gas Production 1990-2014', 
+       x = 'Year', 
+       y = 'Production in Millions of Tons')  
+```
+
+
+ANSWER #7 - There are two distinct trends within the data which infers there are some significant factors influencing oil and gas production within the United States. Factors that have influenced oil and gas production to create such a wild graph are: 
+
+1.) Technological changes in energy efficiency
+2.) Technological changes in oil and gas production mining costs
+3.) Changes in international oil and gas demand and prices
+4.) Policy changes affecting domestic accessible supply
+
+
+```{r}
+ev_sales_percap <- temp_df %>%
+  filter((Year > 2008 & Year < 2015),
+         Indicator == 'New EV sales', 
+         Unit == 'sales / M cap') %>%
+  arrange(desc(Value))
+ev_sales_percap
+```
+
+
+```{r}
+ev_sales_percap %>%
+  ggplot(aes(x = Year, y = Value, color = Country)) + 
+  geom_point() + 
+  labs(title = 'Electric Vehicle Sale Per Capita 2009-2014', 
+       x = 'Year', 
+       y = 'EV Sales Per Capita')
+```
+
+
+
+```{r}
+ev_sales <- temp_df %>%
+  filter((Year > 2008 & Year < 2015),
+         Indicator == 'New EV sales', 
+         Unit == 'New EV sales') %>%
+  arrange(desc(Value))
+ev_sales
+```
+
+
+```{r}
+ev_sales %>%
+  ggplot(aes(x = Year, y = Value, color = Country)) + 
+  geom_point() + 
+  labs(title = 'Electric Vehicle Sales 2009-2014', 
+       x = 'Year', 
+       y = 'EV Sales')
+```
+
+
+ANSWER #8 - It appears that the EV Sales data, per capita and net do not correlate with any of the previous inferences or relate to them in a meaningful way. As we can see from the previous two graphs, China and the United States have the highest two net sales in electric vehicles while Norway has the only high numbers in EV sales per capita. 
+
+Norway is an interesting case in that they do have high renewable numbers, but they are also a high oil producing country. Again, China and the US are both high producers and consumers of oil and gas. This leads me to believe there are many other confounding factors that influence the data, to a level that it would be dangerous to draw conclusions from them other than these case beg investigation. 
+
+
+```{r}
+emissions <- temp_df %>%
+filter(Year == 2014,
+       Indicator == 'Emissions per capita')  
+
+gdp <- temp_df %>%
+filter(Year == 2014,
+       Indicator == 'GDP per capita')
+
+emissions_to_gdp <- merge(emissions, gdp, by.x = 'Country_Code', by.y = 'Country_Code')
+emissions_to_gdp <- emissions_to_gdp %>%
+  rename(gdp_num = Value.y, emissions_num = Value.x)
+```
+
+
+```{r}
+emissions_to_gdp %>%
+  ggplot(aes(x = emissions_num, y = gdp_num, color = Country.x)) + 
+  geom_point() + 
+  labs(title = 'GDP to Emissions in 2014', 
+       x = 'Emissions', 
+       y = 'GDP',
+       color = 'Country')
+```
+
+
+ANSWER #9 - Pivoting seemed like it would not be the quickest method, especially with 5 minutes left. 
+
+
+```{r}
+cor_temp <- emissions_to_gdp %>%
+  select(emissions_num, gdp_num)
+  
+cor(cor_temp, use = 'complete.obs')
+```
+
+ANSWER #10 - The data explains 58.32% of the variability within the data. That's not a strong number, however, is relatively strong when considering the complexity of the topic as well as it being an international dataset. 
+
+
+
