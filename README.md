@@ -30,6 +30,10 @@ Engaged in exploratory data analysis in an attempt to find trends as they relate
 ## Kaggle Competition - Permeability
 Participated in a closed Kaggle competition predicting permeability to familiarize ourselves with multiple machine learning algorithms, their strengths, and their limitations. 
 
+Tensorflow models were trained through GPUs instead of CPUs. The following models were thoroughly evaluated for performance: Linear Regression (Polynomial), Random Forest, Multi-Layer Perceptron Regressor, Support Vector Machines, and Neural Networks along with numerous types of scalers, and validation and hyperparameter tuning (XGBoost, KFold Cross Validation).
+
+INCLUDE EACH MODEL WE EVALUATED, INCLUDE GPU TENSOR FLOW
+
 ![IMAGE4](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/kaggle.PNG)
 
 ## Vanderbilt University ACCRE Labs
