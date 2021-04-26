@@ -15,6 +15,8 @@ Created a dashboard in R to compare flooding related disaster damages and impact
 
 https://github.com/anthonygertz/MIDTERM_Gertz
 
+![IMAGE1](https://github.com/anthonygertz/Portfolio/blob/7c49b04f71094a20b881d536b9382eb976bfbb03/Midterm.PNG)
+
 ## Covid19 Business Violations
 Explored COVID-19 violations reported to hubNashville, the metro government's comprehensive customer service system. 
 
