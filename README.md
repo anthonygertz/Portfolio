@@ -25,14 +25,12 @@ Explored COVID-19 violations reported to hubNashville, the metro government's co
 ## Earthquake Exploration
 Engaged in exploratory data analysis in an attempt to find trends as they relate to earthquakes. My investigation focused on loss of life and injury count variations given the time of day an earthquake occurred. 
 
-![IMAGE3](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/eq.PNG)
+![IMAGE3](https://github.com/anthonygertz/Portfolio/blob/8ed3c7c5de6dedb7c2bd775f9919c16db61d5c76/eq.PNG)
 
 ## Kaggle Competition - Permeability
 Participated in a closed Kaggle competition predicting permeability to familiarize ourselves with multiple machine learning algorithms, their strengths, and their limitations. 
 
 Tensorflow models were trained through GPUs instead of CPUs. The following models were thoroughly evaluated for performance: Linear Regression (Polynomial), Random Forest, Multi-Layer Perceptron Regressor, Support Vector Machines, and Neural Networks along with numerous types of scalers, and validation and hyperparameter tuning (XGBoost, KFold Cross Validation).
-
-INCLUDE EACH MODEL WE EVALUATED, INCLUDE GPU TENSOR FLOW
 
 ![IMAGE4](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/kaggle.PNG)
 
