@@ -20,7 +20,7 @@ https://github.com/anthonygertz/MIDTERM_Gertz
 ## Covid19 Business Violations
 Explored COVID-19 violations reported to hubNashville, the metro government's comprehensive customer service system. My contribution included an interactive Folium map with marker clusters, popup tooltips on individual observations, and exploration into intentionally false submissions.  
 
-
+![IMAGE2](https://github.com/anthonygertz/Portfolio/blob/c2713c676d9272deb06a911b610225a1e0e1b67e/covid.png)
 
 ## Earthquake Exploration
 Engaged in exploratory data analysis in an attempt to find trends as they relate to earthquakes. My investigation focused on loss of life and injury count variations given the time of day an earthquake occurred. 
@@ -35,3 +35,4 @@ Participated in a closed Kaggle competition predicting permeability to familiari
 ## Vanderbilt University ACCRE Labs
 Explored and analyzed job runs on ACCRE's supercomputer. Assessed variations between successful and failed computing runs in attempt to isolate problematic hardware, user errors, and job parameter optimization. 
 
+![IMAGE5](https://github.com/anthonygertz/Portfolio/blob/c2713c676d9272deb06a911b610225a1e0e1b67e/accre.png)
