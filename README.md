@@ -25,12 +25,12 @@ Explored COVID-19 violations reported to hubNashville, the metro government's co
 ## Earthquake Exploration
 Engaged in exploratory data analysis in an attempt to find trends as they relate to earthquakes. My investigation focused on loss of life and injury count variations given the time of day an earthquake occurred. 
 
-
+![IMAGE3](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/eq.PNG)
 
 ## Kaggle Competition - Permeability
 Participated in a closed Kaggle competition predicting permeability to familiarize ourselves with multiple machine learning algorithms, their strengths, and their limitations. 
 
-
+![IMAGE4](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/kaggle.PNG)
 
 ## Vanderbilt University ACCRE Labs
 Explored and analyzed job runs on ACCRE's supercomputer. Assessed variations between successful and failed computing runs in attempt to isolate problematic hardware, user errors, and job parameter optimization. 
