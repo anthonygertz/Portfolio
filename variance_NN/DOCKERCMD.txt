@@ -1,0 +1,4 @@
+docker run -it --gpus all --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyt
+er
+
+docker run -it --gpus all --shm-size=12g --ulimit memlock=-1 --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter

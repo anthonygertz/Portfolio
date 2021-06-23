@@ -5,10 +5,11 @@
 # Table of Contents
 
 1.) Comparative Flood Resiliency Across Time for the Southeastern United States<br>
-2.) Covid19 Business Violations<br>
-3.) Earthquake Exploration<br>
-4.) Kaggle Competition - Permeability<br>
-5.) Vanderbilt University ACCRE Labs<br>
+2.) Exploration in Variance in Neural Network Training<br>
+3.) Covid19 Business Violations<br>
+4.) Earthquake Exploration<br>
+5.) Kaggle Competition - Permeability<br>
+6.) Vanderbilt University ACCRE Labs<br>
 
 ## Comparative Flood Resiliency Across Time for the Southeastern United States
 Created a dashboard in R to compare flooding related disaster damages and impacts across the Southeastern United States by county and state. An in-depth readme of the application's function, hypothetical question, methodology, limitations, and data sources can be found in the link below: 
@@ -16,6 +17,11 @@ Created a dashboard in R to compare flooding related disaster damages and impact
 https://github.com/anthonygertz/MIDTERM_Gertz
 
 ![IMAGE1](https://github.com/anthonygertz/Portfolio/blob/7c49b04f71094a20b881d536b9382eb976bfbb03/Midterm.PNG)
+
+## Exploration of Variance in Neural Network Training
+
+
+
 
 ## Covid19 Business Violations
 Explored COVID-19 violations reported to hubNashville, the metro government's comprehensive customer service system. My contribution included an interactive Folium map with marker clusters, popup tooltips on individual observations, and exploration into intentionally false submissions.  
