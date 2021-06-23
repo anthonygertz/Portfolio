@@ -19,7 +19,7 @@ https://github.com/anthonygertz/MIDTERM_Gertz
 ![IMAGE1](https://github.com/anthonygertz/Portfolio/blob/7c49b04f71094a20b881d536b9382eb976bfbb03/Midterm.PNG)
 
 ## Exploration of Variance in Neural Network Training
-Explored how widely Nerual Network training randomizes model fitting over repeated iterations and acorss the same data. Six thousand models were independently trained using 7, RTX 30 series GPUs in a Docker container in an Ubuntu environment.  
+Explored how widely Nerual Network training randomizes model fitting over repeated iterations and across the same data. Six thousand models were independently trained using 7, RTX 30 series GPUs in a Docker container in an Ubuntu environment.  
 
 The full presentation can be found via the following link: 
 https://docs.google.com/presentation/d/1qx-HCBX1cCkFJI7H2CvscZL2oOR9WUfBKLouLaCiAR8/edit?usp=sharing
