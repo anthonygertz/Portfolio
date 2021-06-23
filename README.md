@@ -26,7 +26,7 @@ https://docs.google.com/presentation/d/1qx-HCBX1cCkFJI7H2CvscZL2oOR9WUfBKLouLaCi
 
 https://github.com/anthonygertz/Portfolio/tree/main/variance_NN
 
-![IMAGE2](https://github.com/anthonygertz/Portfolio/variance_NN/mae_density.PNG)
+![IMAGE2](mae_density.PNG)
 
 ## Covid19 Business Violations
 Explored COVID-19 violations reported to hubNashville, the metro government's comprehensive customer service system. My contribution included an interactive Folium map with marker clusters, popup tooltips on individual observations, and exploration into intentionally false submissions.  
