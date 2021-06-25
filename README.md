@@ -9,9 +9,9 @@
 5.) Kaggle Competition<br>
 6.) Vanderbilt University ACCRE Labs<br>
 
-## Comparing Disaster Resiliency for the Southeastern United States
+## [Comparing Disaster Resiliency for the Southeastern United States](https://github.com/anthonygertz/MIDTERM_Gertz )
 ### Measuring Differences in Disasters Effects Across Time to Assess How Growth Affects Resiliency
-https://github.com/anthonygertz/MIDTERM_Gertz <br>
+<br>
 Created a dashboard in R to compare flooding related disaster damages and impacts across the Southeastern United States by county and state. An in-depth readme of the application's function, hypothetical question, methodology, limitations, and data sources can be found in the link below: 
 
 ![IMAGE1](https://github.com/anthonygertz/Portfolio/blob/7c49b04f71094a20b881d536b9382eb976bfbb03/Midterm.PNG)
