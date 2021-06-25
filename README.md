@@ -18,6 +18,7 @@ Created a dashboard in R to compare flooding related disaster damages and impact
 ## [Neural Networks](https://github.com/anthonygertz/Portfolio/tree/main/variance_NN)
 ### Testing Variance of Model Training to Establish Predictive Limitations and Bounds
 Explored how widely Nerual Network training randomizes model fitting over repeated iterations and across the same data. Six thousand models were independently trained using 7, RTX 30 series GPUs in a Docker container in an Ubuntu environment. <br>
+
 [Full Presentaion](https://docs.google.com/presentation/d/1qx-HCBX1cCkFJI7H2CvscZL2oOR9WUfBKLouLaCiAR8/edit?usp=sharing) <br>
 
 ![IMAGE2](https://github.com/anthonygertz/Portfolio/blob/26b409a2790e58ecfd4baa4ec258b7ff6b6d52e3/mae_density.png)
