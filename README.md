@@ -44,7 +44,7 @@ Tensorflow models were trained through GPUs instead of CPUs. The following model
 ![IMAGE5](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/kaggle.PNG)
 
 ## [Vanderbilt University ACCRE Labs](https://github.com/anthonygertz/Portfolio/tree/main/accre)
-### Isolating Anomlyous Behavior to Identify Potentially Faulty Nodes and User Errors
+### Isolating Anomalous Behavior to Identify Potentially Faulty Nodes and User Errors
 Explored and analyzed job runs on ACCRE's supercomputer. Assessed variations between successful and failed computing runs in attempt to isolate problematic hardware, user errors, and job parameter optimization. 
 
 ![IMAGE6](https://github.com/anthonygertz/Portfolio/blob/c2713c676d9272deb06a911b610225a1e0e1b67e/accre.png)
