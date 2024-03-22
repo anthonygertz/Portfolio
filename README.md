@@ -39,7 +39,7 @@ Engaged in exploratory data analysis in an attempt to find trends as they relate
 ### Testing Machine Learning Algorithms to Predict True Values Across a Complex Dataset
 Familiarize ourselves with multiple machine learning algorithms, their strengths, and their limitations by participating in a closed Kaggle competition predicting rock permiability. 
 
-Tensorflow models were trained through GPUs instead of CPUs. The following models were thoroughly evaluated for performance: Linear Regression (Polynomial), Random Forest, Multi-Layer Perceptron Regressor, Support Vector Machines, and Neural Networks along with numerous types of scalers, and validation and hyperparameter tuning (XGBoost, KFold Cross Validation). <br>
+Tensorflow models were trained through GPUs instead of CPUs. The following models were thoroughly evaluated for performance: Linear Regression (Polynomial), Random Forest, Multi-Layer Perceptron Regressor, Support Vector Machines, and Neural Networks along with numerous types of scalers, and validation and hyperparameter tuning (KFold Cross Validation). <br>
 
 ![IMAGE5](https://github.com/anthonygertz/Portfolio/blob/585d71d29fac16599faa2ec50ba1e68782f177c5/kaggle.PNG)
 
